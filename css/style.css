@@ -6,7 +6,7 @@ html, body {
     width: 100%;
     height: 100%;
     margin: 0;
-    background: grey;
+    background: black
 }
 
 main {
@@ -17,18 +17,52 @@ main {
     margin-right: auto;
 }
 
+header {
+    margin-top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: lightgray;
+}
+
 header h1 {
     color: red;
-    font-size: 50px;
+    font-size: 40px;
+    padding-top: 20px;
     font-style: bold;
     font-family: "Agency FB";
     text-align: center;
-    border: 1px solid black;
 }
 
-/*h1 {
+.sec-one {
+    width: 100%;
+    height: 100px;
+    margin-top: 0;
+    background-color: lightsalmon;
+    border: 1px solid white;
+}
+
+.sec-two {
+     width: 100%;
+    height: 100px;
+    margin-top: 0;
+    border: 1px solid white;
+    background-color: aquamarine;
+}
+
+#foodBtn {
+    background-color: black; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 25px;
+}
+
+#grass {
+    font-family: "Agency FB";
+    font-size: 25px;
     color: red;
-    font-size: 30px;
-    font-style: bold;
-    font-family: "Helvetica";
-}*/
+}
