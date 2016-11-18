@@ -60,6 +60,12 @@ header h1 {
     display: inline-block;
     font-size: 16px;
     margin-top: 25px;
+    outline: none;
+}
+
+#foodBtn:active{
+  background:lightcoral;
+  color:white;
 }
 
 #grass {
