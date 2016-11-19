@@ -10,7 +10,7 @@ function foodNetwork(name, veg, url) {
     this.url = url;
 }
 
-//FUNCTION TO ADD ALL THE OBJECT DISHES TO THE ARRAY
+//FUNCTION THAT PUSH ALL THE OBJECTS DISHES MADE FROM THE CONSTRUCTOR INTO THE ARRAY
 function addfoodNetwork() {
      foodArray.push(
          kottbullar = new foodNetwork("Köttbullar med potatismos, gräddsås, lingon och stektlök", false, "https://www.landleyskok.se/recept/hemlagade-kottbullar.html/"),
@@ -53,11 +53,6 @@ var foodLink = document.getElementById("foodLink");
 var goBtn = document.getElementById("foodBtn");
 goBtn.addEventListener("click", showFood);
 
-//FUNCTION TO SHOW THE FOOD
-function showFood() {
-    randomizeFood();
-}
-
 //FUNCTION THAT SELECTS A DISH AT RANDOM
 function randomizeFood() {
     var vegChecked = document.getElementById("vegCheck").checked;
@@ -77,8 +72,12 @@ function randomizeFood() {
                 foodLink.innerHTML = foodArray[i].name;
                 foodLink.href = foodArray[i].url;
                 vegTrue = false;
-                console.log("Working?");
             }
         }
     }
+}
+
+//FUNCTION TO SHOW THE FOOD
+function showFood() {
+    randomizeFood();
 }
