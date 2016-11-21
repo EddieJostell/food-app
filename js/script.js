@@ -38,7 +38,6 @@ function addfoodNetwork() {
          owenRoast = new foodNetwork("Ugnssteks falukorv med rostade rotsaker", false, "http://www.ica.se/recept/ugnsstekt-falukorv-med-rostade-rotfrukter-713615/"),
          pizzaChipotle = new foodNetwork("Vegetarisk Chipotle Chilipizza", true, "http://www.koket.se/vegetariska-chipotle-chilipizzor"),
          baconLoaf = new foodNetwork("Baconlindad köttfärslimpa", false, "http://mittkok.expressen.se/recept/baconlindad-kottfarslimpa/")
-         //SOME LINKS DONT WORK? DONT KNOW THE REASON YET...
      );
 }
 addfoodNetwork();
