@@ -95,3 +95,8 @@ a:hover {
 	color: darkred;
 	text-decoration: underline;
 }
+
+#vegCheck {
+  width: 18px;
+  height: 18px;
+}
