@@ -48,7 +48,7 @@ var vegCheck = document.getElementById("vegCheck");
 //LINK FOR THE FOODDISPLAY ON THE PAGE
 var foodLink = document.getElementById("foodLink");
 
-//FOOD BUTTON WITH CLICK EVENT
+//FOOD BUTTON THAT GIVE YOU A NEW ALTERNATIVE WITH EVERY CLICK.
 var goBtn = document.getElementById("foodBtn");
 goBtn.addEventListener("click", showFood);
 
@@ -80,3 +80,12 @@ function randomizeFood() {
 function showFood() {
     randomizeFood();
 }
+
+// SHOW A DISH ON PAGE LOAD
+function onStartup() {
+    var r = Math.floor(Math.random() * foodArray.length);
+        foodLink.innerHTML = foodArray[r].name;
+        foodLink.href = foodArray[r].url;
+}
+
+onStartup();
