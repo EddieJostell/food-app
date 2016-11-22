@@ -48,9 +48,6 @@ var vegCheck = document.getElementById("vegCheck");
 //LINK FOR THE FOODDISPLAY ON THE PAGE
 var foodLink = document.getElementById("foodLink");
 
-//FOOD BUTTON THAT GIVE YOU A NEW ALTERNATIVE WITH EVERY CLICK.
-var goBtn = document.getElementById("foodBtn");
-goBtn.addEventListener("click", showFood);
 
 //FUNCTION THAT SELECTS A DISH AT RANDOM
 function randomizeFood() {
@@ -75,6 +72,10 @@ function randomizeFood() {
         }
     }
 }
+
+//FOOD BUTTON THAT GIVE YOU A NEW ALTERNATIVE WITH EVERY CLICK.
+var goBtn = document.getElementById("foodBtn");
+goBtn.addEventListener("click", showFood);
 
 //FUNCTION TO SHOW THE FOOD
 function showFood() {
