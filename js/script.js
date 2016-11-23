@@ -1,16 +1,17 @@
 
 /// WHAT YOU WANT FOR DIN DINS?
-//FOOD ARRAY
+
+//Food array
 var foodArray = [];
 
-//FOOD CONSTRUCTOR
+//Food Constructor
 function foodNetwork(name, veg, url) {
     this.name = name;
     this.veg = veg;
     this.url = url;
 }
 
-//FUNCTION THAT PUSH ALL THE OBJECTS DISHES MADE FROM THE CONSTRUCTOR INTO THE ARRAY
+//Function that push all the object dishes made from the constructor into the array.
 function addfoodNetwork() {
      foodArray.push(
          kottbullar = new foodNetwork("Köttbullar med potatismos, gräddsås, lingon och stektlök", false, "https://www.landleyskok.se/recept/hemlagade-kottbullar.html/"),
@@ -42,24 +43,23 @@ function addfoodNetwork() {
 }
 addfoodNetwork();
 
-//CHECKBOX FOR VEGETARIAN OR NOT VEGETARIAN
+//Checkbox for vegetarian or not vegetarian.
 var vegCheck = document.getElementById("vegCheck");
 
-//LINK FOR THE FOODDISPLAY ON THE PAGE
+//Link for the fooddisplay on the page.
 var foodLink = document.getElementById("foodLink");
 
-
-//FUNCTION THAT SELECTS A DISH AT RANDOM
+//Function that selects a dish at random.
 function randomizeFood() {
     var vegChecked = document.getElementById("vegCheck").checked;
     
-    // IF NOT CHECKED PICK A OBJECT FROM THE ARRAY ON RANDOM
+// If not checked pick a object from the array at random.
     if (vegChecked === false) {
         var r = Math.floor(Math.random() * foodArray.length);
         foodLink.innerHTML = foodArray[r].name;
         foodLink.href = foodArray[r].url;
     }
-    //IF CHECKED PICK A OBJECT ON RANDOM FROM THE ARRAY THAT MATCHES TRUE
+    //If checked pick a object at random from the array that matches true.
     else if (vegChecked === true) {
         var vegTrue = true;
         while (vegTrue) {
@@ -73,20 +73,19 @@ function randomizeFood() {
     }
 }
 
-//FOOD BUTTON THAT GIVE YOU A NEW ALTERNATIVE WITH EVERY CLICK.
+// Food button that give you a new alternative with every click.
 var goBtn = document.getElementById("foodBtn");
 goBtn.addEventListener("click", showFood);
 
-//FUNCTION TO SHOW THE FOOD
+//Function to show the food.
 function showFood() {
     randomizeFood();
 }
 
-// SHOW A DISH ON PAGE LOAD
+//Show a dish on page load.
 function onStartup() {
     var r = Math.floor(Math.random() * foodArray.length);
         foodLink.innerHTML = foodArray[r].name;
         foodLink.href = foodArray[r].url;
 }
-
 onStartup();
